@@ -30,10 +30,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           body: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/sea.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
             width: double.infinity,
             child: Column(children: [
               SizedBox(height: 77,),
-              SizedBox(width: 110,height: 84,child: Placeholder(),),
+              const SizedBox(width: 157,height: 90,
+                child: Image(image: AssetImage('assets/sea.jpg'),),),
               SizedBox(height: 19,),
               Text("введите логин (номер телефона 10 цифр",
               style: TextStyle(fontSize: 16, color: Color.fromRGBO(0, 0, 0, 0.6)),),
